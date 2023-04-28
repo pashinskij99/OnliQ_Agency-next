@@ -73,6 +73,10 @@ h6 {
 	overflow: hidden;
 }
 
+.features-container {
+	padding: 0 15px;
+}
+
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1200px;
@@ -864,6 +868,11 @@ h6 {
 	}
 }
 
+.our-services.banner-one .container {
+	padding-top: 200px;
+
+}
+
 .banner-one .container {
 	position: relative;
 	padding-top: 320px;
@@ -876,6 +885,26 @@ h6 {
 	right: -30px;
 	animation: ImgBounce 5s ease-in-out 0s infinite alternate;
 }
+
+.our-services .banner-one__content h3 {
+	font-weight: bold;
+	font-size: 40px;
+	text-transform: capitalize;
+	line-height: 0.1rem;
+	margin-top: 20px;
+}
+
+/* .our-services .banner-one__content p {
+	font-weight: bold;
+	font-size: 50px;
+} */
+
+.our-services .banner-one__content p.description {
+	font-weight: normal;
+	font-size: 18px;
+	margin-top: 30px;
+}
+
 
 .banner-one__content h3 {
 	margin: 0;
@@ -1292,7 +1321,7 @@ h6 {
 }
 
 .cta-three__shape-3 {
-	bottom: 15%;
+	bottom: 0%;
 	right: 30px;
 	-webkit-transform-origin: center bottom;
 	transform-origin: center bottom;
@@ -1319,7 +1348,7 @@ h6 {
 }
 
 .cta-three__content {
-	padding-left: 70px;
+	/* padding-left: 70px; */
 }
 
 .cta-three__box {
@@ -2786,8 +2815,8 @@ h6 {
 }
 
 .faq-one__shape-1 {
-	top: -145.5px;
-	left: 4%;
+	top: -115.5px;
+	right: 4%;
 	-webkit-transform-origin: center bottom;
 	transform-origin: center bottom;
 	-webkit-animation-fill-mode: both;
