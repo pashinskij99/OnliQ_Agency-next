@@ -1,4 +1,5 @@
 import Link from "next/link";
+import logo_svg from '../public/assets/images/logo-header.svg'
 
 const links = [
   {id: 0, name: 'About us', href: '/'},
@@ -63,7 +64,7 @@ export default class Navbar extends React.Component {
   render() {
     return (
       <div>
-        <header className="main-nav__header-one ">
+        <header className="main-nav__header-one">
           <nav
             className={
               this.state.sticky
@@ -75,10 +76,11 @@ export default class Navbar extends React.Component {
               <div className="main-nav__logo-box">
                 <a href="/" className="main-nav__logo">
                   <img
-                    src="/assets/images/logo-1-1.png"
-                    width="105"
+                    src={logo_svg}
+                    width={160}
                     alt="Awesome Image"
                   />
+                  {/* <Logo /> */}
                 </a>
                 <a href="#" className="side-menu__toggler">
                   <i className="fa fa-bars"></i>

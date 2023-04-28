@@ -1,5 +1,5 @@
 import Link from "next/dist/client/link";
-import React, { Component } from "react";
+import React from "react";
 
 export default class Footer extends React.Component {
   constructor(props) {
@@ -61,8 +61,8 @@ export default class Footer extends React.Component {
                   <div className="footer-widget footer-widget__about">
                     <a className="footer-widget__logo" href="/">
                       <img
-                        src="/assets/images/logo-1-1.png"
-                        width="105"
+                        src="/assets/images/logo-header.svg"
+                        width={160}
                         alt="Awesome Image"
                       />
                     </a>
