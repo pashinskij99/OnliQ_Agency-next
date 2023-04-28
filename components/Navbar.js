@@ -1,5 +1,9 @@
-import React, { Component } from "react";
 import Link from "next/link";
+
+const links = [
+  {id: 0, name: 'About us', href: '/'},
+  {id: 1, name: 'Our services', href: '/our-services'},
+]
 
 export default class Navbar extends React.Component {
   constructor() {
@@ -82,59 +86,13 @@ export default class Navbar extends React.Component {
               </div>
               <div className="main-nav__main-navigation">
                 <ul className="one-page-scroll-menu main-nav__navigation-box">
-                  <li className="current scrollToLink">
-                    <a href="/">Home</a>
-                  </li>
-                  <li className="scrollToLink">
-                    <a href="#profits">Profits</a>
-                  </li>
-                  <li className="scrollToLink">
-                    <a href="#features">Features</a>
-                  </li>
-                  <li className="scrollToLink">
-                    <a href="#bank">Bank</a>
-                  </li>
-                  <li className="scrollToLink">
-                    <a href="#management">Management</a>
-                  </li>
-                  <li className="scrollToLink">
-                    <a href="#why-us">Why us</a>
-                    {/* <ul>
-                      <li>
-                        <Link href="/blog">
-                          <a>Blog Page</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href="/blog-details">
-                          <a>Blog Details</a>
-                        </Link>
-                      </li>
-                    </ul> */}
-                  </li>
-                 
-                  <li className="scrollToLink">
-                    <a href="#clients">Clients</a>
-                  </li>
-                  
-                  <li className="scrollToLink">
-                    <a href="#how-work">How work</a>
-                  </li>
-                  
-                  <li className="scrollToLink">
-                    <a href="#contact">Contact</a>
-                  </li>
+                  {links.map(({id, name, href}) => (
+                    <li key={id}>
+                      <Link href={href}>{name}</Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
-              {/* <div className="main-nav__right">
-                <a
-                  href="#contact"
-                  data-target="#contact"
-                  className="thm-btn header__btn scroll-to-target"
-                >
-                  Start Trial
-                </a>
-              </div> */}
             </div>
           </nav>
         </header>

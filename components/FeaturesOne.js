@@ -3,39 +3,39 @@ import React from "react";
 const featuresArray = [
   {
     id: 0,
-    title: "Strategy",
+    title: "Onlyfans Account Management",
     description:
-      "Good commercial strategy and knowledge of social network algorithms are needed for content creators to produce content and make cash. ",
+      "After signing our contract and completing the on-boarding process, you will be assigned an account manager who will guide you through a consultation and start scheduling your content. You will also be given an assistant for your account. This allows you to focus on content creation while we take care of the management tasks, reducing your stress and giving you more time to do what you enjoy.",
   },
   {
     id: 1,
-    title: "Quality",
+    title: "Social Media Strategy",
     description:
-      "The quality of the content must be excellent to reach your goals, but you have lack of skills to reach it – we are here for you to give more appeal to your social networks.",
+      "At Onliq.Agency, we have a dedicated marketing team that can assist you with your social media strategy. If you're struggling with some social media platforms, we can help. Our in-house staff provides customized strategies for each model, ensuring that they achieve the best possible organic growth on their social media platforms.",
   },
   {
     id: 2,
-    title: "Time",
+    title: "Networking",
     description:
-      "You cannot leave unanswered messages or miss regular posts to reach you goals, but you don’t have time for this – we will be your helping hand.",
+      "Building your presence on social media can be a slow and frustrating process. However, with our networking groups, you don't have to worry about that anymore. You'll be connected with top-notch creators and won't have to waste time and effort trying to find trustworthy collaborators. We provide verified groups to ensure that you have a seamless experience.",
   },
   {
     id: 3,
-    title: "Variety of models",
+    title: "Legal & Financial Support",
     description:
-      "Among over 3 million creators in Onlyfans we will make you stand out of the crowd.",
+      "We have established professional connections and contacts that are readily available to assist you in managing your income and securing your financial future.",
   },
   {
     id: 4,
-    title: "Ideas",
+    title: "Mental Health & 24/7 Support",
     description:
-      "Searching for new ideas to create content for your account?  We will create an eefficient action plan for you based on latest trends.",
+      "Our models are our top priority, and we are always available to offer guidance and support, no matter how big or small the issue may be. We are here to lend an ear and provide a friendly chat whenever needed, 24/7.",
   },
   {
     id: 5,
-    title: "Motivation",
+    title: "Community",
     description:
-      "It is not easy to stay motivated every day no matter what in a long term. A manager is here for you to help keep going.",
+      "We prioritize the well-being of our models and are committed to providing them with guidance and support, regardless of the nature or complexity of the issue. Our team is available round the clock to lend a listening ear and offer a friendly chat whenever necessary.",
   },
 ];
 
@@ -52,7 +52,7 @@ const FeaturesOne = () => {
         alt=""
         className="cta-three__shape-3"
       />
-      <div className="container">
+      <div className="features-container">
         <img
           src="/assets/images/shapes/cta-1-shape-1.png"
           alt=""
@@ -62,7 +62,7 @@ const FeaturesOne = () => {
         <div className="row justify-content-end">
           <div className="col-lg-12">
             <div className="cta-three__content">
-              <div className="block-title text-left">
+              {/* <div className="block-title text-center">
                 <span className="block-title__bubbles"></span>
                 <p>Checkout App Features</p>
                 <h3>OnlyFans is not a piece of cake…</h3>
@@ -72,7 +72,7 @@ const FeaturesOne = () => {
                   Therefore, accessing the high revenues of the top creators
                   requires the assistance of a professional team.
                 </p>
-              </div>
+              </div> */}
               <div className="cta-three__box-wrap">
                 {featuresArray.map(({ id, title, description }) => (
                   <div key={id} className="cta-three__box">
@@ -86,11 +86,11 @@ const FeaturesOne = () => {
                   </div>
                 ))}
               </div>
-              <div className="cta-three__wrapper-btn">
+              {/* <div className="cta-three__wrapper-btn">
                 <a href="#" className="thm-btn cta-three__btn">
                   Discover More
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Link from "next/dist/client/link";
 import React, { Component } from "react";
 
 export default class Footer extends React.Component {
@@ -84,20 +85,12 @@ export default class Footer extends React.Component {
                     <div className="footer-widget__links-wrap">
                       <ul className="list-unstyled">
                         <li>
-                          <a href="#">About us</a>
+                          <Link href="/">About us</Link>
                         </li>
                         <li>
-                          <a href="#">Our Team</a>
+                          <Link href="/our-services">Our services</Link>
                         </li>
-                        <li>
-                          <a href="#">All Features</a>
-                        </li>
-                        <li>
-                          <a href="#">Our Services</a>
-                        </li>
-                        <li>
-                          <a href="#">Latest Blog</a>
-                        </li>
+                        
                       </ul>
 
                       <ul className="list-unstyled">

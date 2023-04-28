@@ -10,36 +10,33 @@ import Pricing from "../components/Pricing";
 import Screenshots from "../components/Screenshots";
 import Testimonial from "../components/Testimonial";
 import Brands from "../components/Brands";
-import Faq from "../components/Faq";
+import Faq from "../components/WhatWeDo";
 import BlogHome from "../components/BlogHome";
 import Contact from "../components/Contact";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
-
+import AboutView from "../views/AboutView/AboutView";
 
 const Home = () => (
-
-    <Layout pageTitle="Zimed - React Next App Landing Page Template">
-        <Navbar />
-        <Banner />
-        <Services />
-        <FeaturesOne />
-        <FeaturesTwo />
-        <BlogHome />
-        <Faq />
-        <CallToAction />
-        <Testimonial />
-        <Contact />
-
-        <Footer />
-
-        {/* <Video /> */}
-        {/* <Counter /> */}
-        {/* <Pricing /> */}
-        {/* <Screenshots /> */}
-        {/* <Brands /> */}
-    </Layout>
-
+    <>
+        <AboutView />
+    </>
 )
 
 export default Home;
+
+    {/* <Banner /> */}
+    {/* <Services /> */}
+    {/* <FeaturesOne /> */}
+    {/* <FeaturesTwo /> */}
+    {/* <BlogHome /> */}
+    {/* <CallToAction /> */}
+    {/* <Testimonial /> */}
+    {/* <Contact /> */}
+
+
+    {/* <Video /> */}
+    {/* <Counter /> */}
+    {/* <Pricing /> */}
+    {/* <Screenshots /> */}
+    {/* <Brands /> */}
