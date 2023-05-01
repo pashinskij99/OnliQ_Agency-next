@@ -4,6 +4,8 @@ import PageHeader from "../components/PageHeader";
 import BlogDetails from "../components/BlogDetails";
 import Footer from "../components/Footer";
 
+
+
 const BlogDetailPage = () => (
 
     <Layout pageTitle="Zimed - Blog Details">

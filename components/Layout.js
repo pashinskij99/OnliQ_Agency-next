@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 const Layout = (props) => {
     return(
-        <div>
+        <>
             <Head>
                 <title>{props.pageTitle}</title>
                 <meta charSet="utf-8" />
@@ -21,13 +21,11 @@ const Layout = (props) => {
 
             </Head>
 
-            <div className="page-wrapper">
 
             {props.children}
 
-            </div>
 
-        </div>
+        </>
     )
 }
 export default Layout;

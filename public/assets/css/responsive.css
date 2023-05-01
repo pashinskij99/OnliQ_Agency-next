@@ -27,6 +27,7 @@
     }
     .cta-three__moc {
         left: -20%;
+        width: 65%;
     }
     .cta-three__content {
         padding-left: 0;
@@ -55,7 +56,8 @@
         right: auto;
         margin-left: auto;
         margin-right: auto;
-        display: block;
+        /* display: block; */
+        display: none;
         margin-bottom: 30px;
     }
     .banner-one .container {
@@ -69,6 +71,7 @@
         position: relative;
         top: auto;
         left: auto;
+        width: 100%;
     }
     .cta-three__shape-1 {
         top: 0%;

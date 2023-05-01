@@ -5,7 +5,7 @@ const PageHeader = (props) => {
     return (
         <div>
             <section className="page-header"
-                     style={{backgroundImage: `url(/assets/images/background/inner-banner-bg.png)`}}>
+                     style={{backgroundImage: `linear-gradient( rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.5) ), url(/assets/images/background/inner-banner-bg.png)`}}>
                 <div className="container">
                     <ul className="list-unstyled thm-breadcrumb">
                         <li>
