@@ -24,7 +24,7 @@ const HomeContactUs = () => {
     if(!email_reg.test(email)) dispatch({type: SET_ERROR_EMAIL, payload: 'Incorrect email!'})
     else dispatch({type: SET_ERROR_EMAIL, payload: ''})
 
-    if(name.length < 3) dispatch({type: SET_ERROR_NAME, payload: 'Name must be at least 3 letters long!'})
+    if(name.length < 3) dispatch({type: SET_ERROR_NAME, payload: 'The name must be at least 3 characters long!'})
     else dispatch({type: SET_ERROR_NAME, payload: ''})
 
     if(email_reg.test(email) && name.length >= 3) {
