@@ -65,7 +65,7 @@ const HomeWhatWeDo = () => {
           <div className="accrodion">
             <div className="accrodion-inner">
               <div className="accrodion-title">
-                <h4>We offer a range of services, which include but are not limited to:</h4>
+                <h4>We offer a range of services, which include but are not limited to</h4>
               </div>
               <div className="accrodion-content">
                 <div className="inner">
