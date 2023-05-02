@@ -20,8 +20,8 @@ const HomeBanner = () => {
         <div className="row">
           <div className="col-lg-8">
             <div className="banner-one__content">
-              <p className="banner-one__tag-line">Welcome to Business <Link href="/contact">contact us</Link></p>
-              <h3>The UK’s leading 0% <br /> Onlyfans creator ran agency.</h3>
+              {/* <p className="banner-one__tag-line">Welcome to Business <Link href="/contact">contact us</Link></p> */}
+              <h3>The Onliq.Agency creator ran agency</h3>
               <Link href="/contact">
                 <a data-target="#contact" className="thm-btn banner-one__btn scroll-to-target">
                   Contact Us

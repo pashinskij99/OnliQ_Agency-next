@@ -6,7 +6,7 @@ const HomeServices = () => {
       <div className="container">
         <div className="block-title text-center">
           <span className="block-title__bubbles"></span>
-          <h3>Incorporating knowledge from the media and marketing industries into the management of OnlyFans.</h3>
+          <h3>Incorporating knowledge from the media and marketing industries into the management of OnlyFans</h3>
         </div>
 
       </div>

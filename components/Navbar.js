@@ -82,9 +82,6 @@ export default class Navbar extends React.Component {
                                     <li className="scrollToLink">
                                         <a href="#our-services">Our Services</a>
                                     </li>
-                                    <li className="scrollToLink">
-                                        <a href="#lets-go">Let's go</a>
-                                    </li>
                                 </ul>
                             </div>
                             <div className="main-nav__right">

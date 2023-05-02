@@ -1,5 +1,5 @@
 import Link from 'next/dist/client/link';
-import React, { Component } from 'react';
+import React from 'react';
 
 export default class Footer extends React.Component {
     constructor(props) {
@@ -53,7 +53,7 @@ export default class Footer extends React.Component {
                                             <a className="footer-widget__logo">
                                                 <img
                                                     src="/assets/icons/logo-header.svg" width="200"
-                                                    alt="Awesome Image" 
+                                                    alt="Awesome Image"
                                                 />
                                             </a>
                                         </Link>
@@ -63,7 +63,7 @@ export default class Footer extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="col-lg-4 ml-auto">
+                                <div className="col-lg-2 ml-auto">
                                     <div className="footer-widget footer-widget__links">
                                         <h3 className="footer-widget__title">Explore</h3>
                                         <div className="footer-widget__links-wrap">
@@ -81,13 +81,8 @@ export default class Footer extends React.Component {
                                                     <a href="#our-services">Our Services</a>
                                                 </li>
                                                 <li className="scrollToLink">
-                                                    <a href="#lets-go">Let's go</a>
+                                                    <Link href="/contact">Contact us</Link>
                                                 </li>
-                                            </ul>
-
-                                            <ul className="list-unstyled">
-                                                <li><a href="#">Home Page</a></li>
-                                                <li><a href="#">Contact Page</a></li>
                                             </ul>
                                         </div>
                                     </div>

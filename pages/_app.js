@@ -1,3 +1,4 @@
+import 'react-toastify/dist/ReactToastify.css';
 import 'react-modal-video/css/modal-video.min.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';

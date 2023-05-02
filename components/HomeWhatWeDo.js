@@ -62,7 +62,7 @@ const HomeWhatWeDo = () => {
               </div>
             </div>
           </div>
-          <div className="accrodion ">
+          <div className="accrodion">
             <div className="accrodion-inner">
               <div className="accrodion-title">
                 <h4>We offer a range of services, which include but are not limited to:</h4>
