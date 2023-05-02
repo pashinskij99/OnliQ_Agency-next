@@ -88,7 +88,7 @@ const HomeContactUs = () => {
                       }
                       type="text"
                       name="name"
-                      placeholder="Name"
+                      placeholder="Name*"
                     />
                     
                     {
@@ -113,7 +113,7 @@ const HomeContactUs = () => {
                       className=""
                       type="text"
                       name="email"
-                      placeholder="Email"
+                      placeholder="Email*"
                     />
                     {
                       error_message.email
