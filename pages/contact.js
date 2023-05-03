@@ -6,10 +6,16 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ContactNavbar from '../components/ContactNavbar'
 import ContactFooter from '../components/ContactFooter'
+import SeoHead from '../components/Head'
 
 const Contact = () => {
   return (
     <Layout pageTitle="Zimed - Blog Details">
+      <SeoHead 
+        title='Onliq.Agency Contact' 
+        description='Join our waiting list!
+        Looking forward to hear from you!' 
+      /> 
       <ContactNavbar />
       <PageHeader title="Contact Us" />
       <HomeContactUs />
