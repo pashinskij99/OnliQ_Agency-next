@@ -27,7 +27,6 @@ import HomeContactUs from "../components/HomeContactUs";
 import SeoHead from "../components/Head";
 
 const Home = () => (
-
     <Layout pageTitle="Zimed - React Next App Landing Page Template">
         <SeoHead 
             title={'Onliq.Agency Home'} 
@@ -70,7 +69,6 @@ const Home = () => (
         <HomeCallToAction />
         <Footer />
     </Layout>
-
 )
 
 export default Home;
