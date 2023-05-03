@@ -1,43 +1,21 @@
-import React, { useReducer } from "react";
+import React from "react";
 import { PostUserData } from "../services/postUserData.services";
 import {ToastContainer, toast} from 'react-toastify';
+import { useForm } from "react-hook-form";
 
 const email_reg = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
 const HomeContactUs = () => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const {register, handleSubmit, formState: {errors}, reset, formState: {isSubmitting}} = useForm()
 
-  const {
-    name,
-    email,
-    instagram_link,
-    onlyfans_link,
-    onlyfans_percentage,
-    message,
-    error_message,
-    loading
-  } = state;
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    if(!email_reg.test(email)) dispatch({type: SET_ERROR_EMAIL, payload: 'Incorrect email!'})
-    else dispatch({type: SET_ERROR_EMAIL, payload: ''})
-
-    if(name.length < 3) dispatch({type: SET_ERROR_NAME, payload: 'The name must be at least 3 characters long!'})
-    else dispatch({type: SET_ERROR_NAME, payload: ''})
-
-    if(email_reg.test(email) && name.length >= 3) {
-      dispatch({type: SET_LOADING, payload: true})
-      await PostUserData.postUserData(state).then((res) => {
-        if(res.data.status === 200) {
-          toast.success("Your data has been successfully sent!", {theme: 'light', style: {lineHeight: '1.5rem', top: '10vh', fontSize: '14px'}});
-          dispatch({type: SET_INITIAL})
-        }
-
-      })
-    }
-  };
+  const onSubmit = async data => {
+    await PostUserData.postUserData(data).then((res) => {
+      if(res.data.status === 200) {
+        toast.success("Your data has been successfully sent!", {theme: 'light', style: {lineHeight: '1.5rem', top: '10vh', fontSize: '14px'}});
+        reset()
+      }
+    })
+  }
 
   return (
     <section className="contact-one home-contact mb-5 pt-3" id="contact">
@@ -72,67 +50,43 @@ const HomeContactUs = () => {
           <div className="col-lg-8 m-auto">
             <div className="contact-one__form-wrap">
               <form
-                onSubmit={handleSubmit}
+                onSubmit={handleSubmit(onSubmit)}
                 className="contact-form-validated contact-one__form"
               >
                 <div style={{rowGap: '15px'}} className="row">
                   <div className="col-md-6">
                     <input
-                      value={name}
-                      className=""
-                      onChange={(event) =>
-                        dispatch({
-                          type: SET_NAME,
-                          payload: event.target.value,
-                        })
-                      }
+                      {...register('name', {required: true, minLength: 3})}
                       type="text"
                       name="name"
-                      placeholder="Name*"
+                      placeholder="Name"
                     />
-                    
-                    {
-                      error_message.name
-                        ? <span 
-                            style={{fontSize: '12px', lineHeight: '1rem', transform: 'translateY(-40%)'}} 
-                            className="text-danger position-absolute bottom-0"
-                          >{error_message.name}</span>
-                        : null
+                    {errors.name && 
+                      <span 
+                        style={{fontSize: '12px', lineHeight: '1rem', transform: 'translateY(-40%)'}} 
+                        className="text-danger position-absolute bottom-0"
+                      >Name must be at least 3 letters long!</span>
                     }
                     
                   </div>
                   <div className="col-md-6">
                     <input
-                      value={email}
-                      onChange={(event) =>
-                        dispatch({
-                          type: SET_EMAIL,
-                          payload: event.target.value,
-                        })
-                      }
+                      {...register('email', {required: true, pattern: email_reg})}
                       className=""
                       type="text"
                       name="email"
-                      placeholder="Email*"
+                      placeholder="Email"
                     />
-                    {
-                      error_message.email
-                        ? <span 
-                            style={{fontSize: '12px', lineHeight: '1rem', transform: 'translateY(-40%)'}} 
-                            className="text-danger position-absolute"
-                          >{error_message.email}</span>
-                        : null
+                    {errors.email &&
+                      <span 
+                        style={{fontSize: '12px', lineHeight: '1rem', transform: 'translateY(-40%)'}} 
+                        className="text-danger position-absolute bottom-0"
+                      >Incorrect email!</span>
                     }
                   </div>
                   <div className="col-md-6">
                     <input
-                      value={instagram_link}
-                      onChange={(event) =>
-                        dispatch({
-                          type: SET_INSTAGRAM,
-                          payload: event.target.value,
-                        })
-                      }
+                      {...register('instagram_link')}
                       type="text"
                       name="instagram_link"
                       placeholder="Instagram link"
@@ -140,13 +94,7 @@ const HomeContactUs = () => {
                   </div>
                   <div className="col-md-6">
                     <input
-                      value={onlyfans_link}
-                      onChange={(event) =>
-                        dispatch({
-                          type: SET_ONLYFANS,
-                          payload: event.target.value,
-                        })
-                      }
+                      {...register('onlyfans_link')}
                       type="text"
                       name="onlyfans_link"
                       placeholder="Onlyfans link"
@@ -154,13 +102,7 @@ const HomeContactUs = () => {
                   </div>
                   <div className="col-md-12">
                     <input
-                      value={onlyfans_percentage}
-                      onChange={(event) =>
-                        dispatch({
-                          type: SET_ONLYFANS_PERCENTAGE,
-                          payload: event.target.value,
-                        })
-                      }
+                      {...register('onlyfans_percentage')}
                       type="text"
                       name="onlyfans_percentage"
                       placeholder="Onlyfans Percentage"
@@ -168,13 +110,7 @@ const HomeContactUs = () => {
                   </div>
                   <div className="col-md-12">
                     <textarea
-                      value={message}
-                      onChange={(event) =>
-                        dispatch({
-                          type: SET_MESSAGE,
-                          payload: event.target.value,
-                        })
-                      }
+                      {...register('message')}
                       name="message"
                       placeholder="Message"
                     ></textarea>
@@ -182,9 +118,9 @@ const HomeContactUs = () => {
                       <button
                         type="submit"
                         className="thm-btn contact-one__form-btn d-flex align-items-center"
-                        disabled={loading}
+                        disabled={isSubmitting}
                       >
-                        {loading && <span class="spinner-border spinner-border-md mr-3" role="status" aria-hidden="true" />}
+                        {isSubmitting && <span className="spinner-border spinner-border-md mr-3" role="status" aria-hidden="true" />}
                         
                         Send Message
                       </button>
@@ -200,77 +136,6 @@ const HomeContactUs = () => {
       </div>
     </section>
   );
-};
-
-const initialState = {
-  name: "",
-  email: "",
-  instagram_link: "",
-  onlyfans_link: "",
-  onlyfans_percentage: "",
-  message: "",
-  error_message: {
-    name: '',
-    email: '',
-  },
-  loading: false,
-};
-
-const SET_NAME = "SET_NAME";
-const SET_EMAIL = "SET_EMAIL";
-const SET_INSTAGRAM = "SET_INSTAGRAM";
-const SET_ONLYFANS = "SET_ONLYFANS";
-const SET_ONLYFANS_PERCENTAGE = "SET_ONLYFANS_PERCENTAGE";
-const SET_MESSAGE = "SET_MESSAGE";
-const SET_LOADING = "SET_LOADING";
-const SET_ERROR_NAME = "SET_ERROR_NAME";
-const SET_ERROR_EMAIL = "SET_ERROR_EMAIL";
-const SET_INITIAL = "SET_INITIAL";
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case SET_NAME:
-      return { ...state, name: action.payload };
-      break;
-
-    case SET_EMAIL:
-      return { ...state, email: action.payload };
-      break;
-
-    case SET_INSTAGRAM:
-      return { ...state, instagram_link: action.payload };
-      break;
-
-    case SET_ONLYFANS:
-      return { ...state, onlyfans_link: action.payload };
-      break;
-
-    case SET_ONLYFANS_PERCENTAGE:
-      return { ...state, onlyfans_percentage: action.payload };
-      break;
-    case SET_MESSAGE:
-      return { ...state, message: action.payload };
-      break;
-
-    case SET_ERROR_NAME:
-      return { ...state, error_message: {...state.error_message, name: action.payload} };
-      break;
-
-    case SET_ERROR_EMAIL:
-      return { ...state, error_message: {...state.error_message, email: action.payload} };
-      break;
-
-    case SET_LOADING:
-      return {...state, loading: action.payload}
-      break
-
-    case SET_INITIAL: 
-      return {...initialState}
-      break
-    
-    default:
-      return state;
-  }
 };
 
 export default HomeContactUs;

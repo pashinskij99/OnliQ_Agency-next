@@ -17,7 +17,7 @@
     }
 
     .stricked-menu {
-        display: none;
+        /* display: none; */
     }
     .faq-one__shape-3,
     .cta-three__shape-3,
@@ -234,6 +234,10 @@
 }
 
 @media(max-width: 375px) {
+
+    .cta-two {
+        padding-bottom: 130px;
+    }
     .author-one {
         padding: 30px;
     }

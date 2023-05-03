@@ -1,5 +1,5 @@
 import Link from 'next/dist/client/link';
-import React, { Component } from 'react';
+import React from 'react';
 
 export default class ContactFooter extends React.Component {
   constructor(props) {
@@ -55,44 +55,30 @@ export default class ContactFooter extends React.Component {
                       </a>
                     </Link>
                     <p>Onliq.Agency recognizes the significance of dependable management for the progress and expansion of OnlyFans. As the top agency to offer such services, we remain informed and knowledgeable about the most recent developments in this constantly evolving digital environment.</p>
-                    <p><a href="mailto:needhelp@zimed.com">needhelp@zimed.com</a> <br />
-                      <a href="tel:666-888-0000">666 888 0000</a></p>
+                    {/* <p><a href="mailto:needhelp@zimed.com">needhelp@zimed.com</a> <br />
+                      <a href="tel:666-888-0000">666 888 0000</a></p> */}
                   </div>
                 </div>
 
-                {/* <div className="col-lg-4 ml-auto">
+                <div className="col-lg-2 ml-auto">
                   <div className="footer-widget footer-widget__links">
-                    <h3 className="footer-widget__title">Explore</h3>
+                    <h3 className="footer-widget__title">Contact Us</h3>
                     <div className="footer-widget__links-wrap">
                       <ul className="list-unstyled">
                         <li className="current scrollToLink">
-                          <a href="#home">Home</a>
+                          <a href="mailto:needhelp@zimed.com">needhelp@zimed.com</a>
                         </li>
                         <li className="scrollToLink">
-                          <a href="#about">About us</a>
+                          <a href="tel:666-888-0000">666 888 0000</a>
                         </li>
-                        <li className="scrollToLink">
-                          <a href="#what-we-do">What we do</a>
-                        </li>
-                        <li className="scrollToLink">
-                          <a href="#our-services">Our Services</a>
-                        </li>
-                        <li className="scrollToLink">
-                          <a href="#lets-go">Let's go</a>
-                        </li>
-                      </ul>
-
-                      <ul className="list-unstyled">
-                        <li><a href="#">Home Page</a></li>
-                        <li><a href="#">Contact Page</a></li>
                       </ul>
                     </div>
                   </div>
-
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
+
 
           <div className="site-footer__bottom">
             <div className="container">
@@ -106,43 +92,6 @@ export default class ContactFooter extends React.Component {
         </footer>
         <div onClick={this.scrollTop} className="scroll-to-target scroll-to-top" style={{ display: this.state.scrollBtn ? 'block' : 'none' }}><i
           className="fa fa-angle-up"></i></div>
-
-        {/* <div className="side-menu__block"> */}
-
-
-          {/* <div className="side-menu__block-overlay custom-cursor__overlay">
-            <div className="cursor"></div>
-            <div className="cursor-follower"></div>
-          </div> */}
-          {/* <div className="side-menu__block-inner ">
-            <div className="side-menu__top justify-content-end">
-
-              <a href="#" className="side-menu__toggler side-menu__close-btn"><img
-                src="assets/images/shapes/close-1-1.png" alt="" /></a>
-            </div>
-
-            <nav className="mobile-nav__container">
-
-            </nav>
-            <div className="side-menu__sep"></div>
-
-            <div className="side-menu__content">
-              <p>Lorem Ipsum is simply dummy text the printing and setting industry. Lorm Ipsum has been
-                the industry's stanard dummy text ever. </p>
-              <p><a href="mailto:needhelp@zimed.com">needhelp@zimed.com</a> <br /> <a
-                href="tel:888-999-0000">888 999 0000</a></p>
-              <div className="side-menu__social">
-                <a className="fab fa-facebook-f" href="#"></a>
-                <a className="fab fa-twitter" href="#"></a>
-                <a className="fab fa-instagram" href="#"></a>
-                <a className="fab fa-pinterest-p" href="#"></a>
-              </div>
-            </div>
-
-          </div> */}
-
-        {/* </div> */}
-
       </div>
 
     )

@@ -41,8 +41,8 @@ export default class ContactNavbar extends React.Component {
           <nav className={this.state.sticky ? "header-navigation stricky stricked-menu stricky-fixed" : "header-navigation stricky"}>
             <div style={{height: '90px'}} className="container align-items-center">
               <div className="main-nav__logo-box">
-                <Link href="/" className="main-nav__logo">
-                  <a>
+                <Link href="/">
+                  <a className="main-nav__logo">
                     <img src="/assets/icons/logo-header.svg" width="170" alt="Awesome Image" />
                   </a>
                 </Link>

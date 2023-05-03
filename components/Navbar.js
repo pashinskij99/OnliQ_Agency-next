@@ -61,8 +61,8 @@ export default class Navbar extends React.Component {
                     <nav className={this.state.sticky ? "header-navigation stricky stricked-menu stricky-fixed" : "header-navigation stricky"}>
                         <div className="container">
                             <div className="main-nav__logo-box">
-                                <Link href="/" className="main-nav__logo">
-                                    <a>
+                                <Link href="/">
+                                    <a className="main-nav__logo">
                                         <img src="/assets/icons/logo-header.svg" width="170" alt="Awesome Image" />
                                     </a>
                                 </Link>

@@ -612,6 +612,13 @@ h6 {
 	z-index: 91;
 }
 
+@media screen and (max-width: 768px) {
+	.main-nav__header-one {
+		width: 100%;
+		position: fixed;
+	}
+}
+
 .main-nav__header-one .container {
 	position: relative;
 	display: flex;
