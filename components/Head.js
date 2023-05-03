@@ -1,12 +1,17 @@
 import Head from "next/head";
 
-const SeoHead = ({title, description}) => {
+const SeoHead = ({title, description, keyword}) => {
   return (
     <Head>
       <title>{title}</title>
-      <link rel="icon" href="/assets/icons/favicon-onliq.svg" />
-      <meta property="title" content={title} />
-      <meta property="description" content={description} />
+      <link rel='icon' href='/assets/icons/favicon-onliq.svg'/>
+      <meta name='title' content={title} />
+      <meta name='description' content={description} />
+      <meta name='keyword' content={keyword} />
+      <meta
+        property='og:image'
+        content='/assets/images/girls/girl-9.jpg'
+      />
     </Head>
   )
 }
