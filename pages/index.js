@@ -24,10 +24,10 @@ import HomeWhatWeDo from "../components/HomeWhatWeDo";
 import HomeOurServices from "../components/HomeOurServices";
 import HomeCallToAction from "../components/HomeCallToAction";
 import HomeContactUs from "../components/HomeContactUs";
-import SeoHead from "../components/Head";
+import SeoHead from "../components/SeoHead";
 
 const Home = () => (
-    <Layout pageTitle="Zimed - React Next App Landing Page Template">
+    <Layout>
         <SeoHead 
             title={'Onliq.Agency Home'} 
             description={'Onliq.Agency recognizes the significance of dependable management for the progress and expansion of OnlyFans. As the top agency to offer such services, we remain informed and knowledgeable about the most recent developments in this constantly evolving digital environment. Our adept blend of dependable marketing solutions and comprehensive comprehension of the OnlyFans algorithm guarantees that our clients always have an advantage over their rivals.'} 
