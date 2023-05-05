@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ContactNavbar from '../components/ContactNavbar'
 import ContactFooter from '../components/ContactFooter'
-import SeoHead from '../components/Head'
+import SeoHead from '../components/SeoHead'
 
 const Contact = () => {
   return (
