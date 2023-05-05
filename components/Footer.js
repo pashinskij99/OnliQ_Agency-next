@@ -89,16 +89,18 @@ export default class Footer extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="col-lg-2">
+                                <div className="col-lg-3">
                                     <div className="footer-widget footer-widget__links">
                                         <h3 className="footer-widget__title">Contact Us</h3>
                                         <div className="footer-widget__links-wrap">
                                             <ul className="list-unstyled">
                                                 <li className="current scrollToLink">
-                                                    <a href="mailto:needhelp@zimed.com">needhelp@zimed.com</a>
+                                                    <a href="mailto:onliq.agency@gmail.com">onliq.agency@gmail.com</a> 
                                                 </li>
-                                                <li className="scrollToLink">
-                                                    <a href="tel:666-888-0000">666 888 0000</a>
+                                                <li>
+                                                    <a href='https://goo.gl/maps/JUTcKp14dqqcK4Xz8' target='_blank' style={{fontStyle: 'normal', lineHeight: 1.4}}>
+                                                        7B, ONE CAPITAL PLACE, <br /> 18 LUARD ROAD, <br /> WAN CHAI, HONG KONG
+                                                    </a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -111,7 +113,7 @@ export default class Footer extends React.Component {
                     <div className="site-footer__bottom">
                         <div className="container">
                             <div className="inner-container">
-                                <p className='ml-auto'>© copyright 2020 by Layerdrops.com</p>
+                                <p className='ml-auto'>© {new Date().getFullYear()} Affroad Ltd, HK. All Rights Reserved</p>
                             </div>
 
                         </div>
@@ -142,14 +144,16 @@ export default class Footer extends React.Component {
 
                         <div className="side-menu__content">
                             <p>Onliq.Agency recognizes the significance of dependable management for the progress and expansion of OnlyFans. As the top agency to offer such services, we remain informed and knowledgeable about the most recent developments in this constantly evolving digital environment.</p>
-                            <p><a href="mailto:needhelp@zimed.com">needhelp@zimed.com</a> <br /> <a
-                                href="tel:888-999-0000">888 999 0000</a></p>
-                            {/* <div className="side-menu__social">
-                                <a className="fab fa-facebook-f" href="#"></a>
-                                <a className="fab fa-twitter" href="#"></a>
-                                <a className="fab fa-instagram" href="#"></a>
-                                <a className="fab fa-pinterest-p" href="#"></a>
-                            </div> */}
+                            <p>
+                                <a href="mailto:onliq.agency@gmail.com">onliq.agency@gmail.com</a> 
+                                <br /> 
+                                <a href="tel:888-999-0000">888 999 0000</a>
+                                <br />
+                                <a href='https://goo.gl/maps/JUTcKp14dqqcK4Xz8' target='_blank'>
+                                    7B, ONE CAPITAL PLACE, <br /> 18 LUARD ROAD, <br /> WAN CHAI, HONG KONG
+                                </a>
+                            </p>
+                            
                         </div>
 
                     </div>

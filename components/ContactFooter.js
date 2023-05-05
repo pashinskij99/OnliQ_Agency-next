@@ -60,16 +60,22 @@ export default class ContactFooter extends React.Component {
                   </div>
                 </div>
 
-                <div className="col-lg-2 ml-auto">
+                <div className="col-lg-3 ml-auto">
                   <div className="footer-widget footer-widget__links">
                     <h3 className="footer-widget__title">Contact Us</h3>
                     <div className="footer-widget__links-wrap">
                       <ul className="list-unstyled">
                         <li className="current scrollToLink">
-                          <a href="mailto:needhelp@zimed.com">needhelp@zimed.com</a>
+                          <a href="mailto:onliq.agency@gmail.com">onliq.agency@gmail.com</a> 
                         </li>
-                        <li className="scrollToLink">
-                          <a href="tel:666-888-0000">666 888 0000</a>
+                        <li>
+                          <a 
+                            href='https://goo.gl/maps/JUTcKp14dqqcK4Xz8' 
+                            target='_blank' 
+                            style={{fontStyle: 'normal', lineHeight: 1.4}}
+                          >
+                            7B, ONE CAPITAL PLACE, <br /> 18 LUARD ROAD, <br /> WAN CHAI, HONG KONG
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -83,7 +89,7 @@ export default class ContactFooter extends React.Component {
           <div className="site-footer__bottom">
             <div className="container">
               <div className="inner-container">
-                <p className='ml-auto'>© copyright 2020 by Layerdrops.com</p>
+                <p className='ml-auto'>© {new Date().getFullYear()} Affroad Ltd, HK. All Rights Reserved</p>
               </div>
 
             </div>
