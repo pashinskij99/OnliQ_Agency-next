@@ -147,8 +147,6 @@ export default class Footer extends React.Component {
                             <p>
                                 <a href="mailto:onliq.agency@gmail.com">onliq.agency@gmail.com</a> 
                                 <br /> 
-                                <a href="tel:888-999-0000">888 999 0000</a>
-                                <br />
                                 <a href='https://goo.gl/maps/JUTcKp14dqqcK4Xz8' target='_blank'>
                                     7B, ONE CAPITAL PLACE, <br /> 18 LUARD ROAD, <br /> WAN CHAI, HONG KONG
                                 </a>
