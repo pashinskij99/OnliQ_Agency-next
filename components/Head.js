@@ -10,7 +10,7 @@ const SeoHead = ({title, description, keyword}) => {
       <meta name='keyword' content={keyword} />
       <meta
         property='og:image'
-        content='/assets/images/girls/girl-9.jpg'
+        content='/assets/icons/logo-header.svg'
       />
     </Head>
   )
